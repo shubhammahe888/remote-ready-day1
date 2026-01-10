@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Day 1: Remote Ready in 7 Days - Free resume optimization resources for remote job seekers">
+    <title>Day 1: Resume Optimization | Remote Ready in 7 Days</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1e3a8a;
+            --secondary: #0891b2;
+            --accent: #f97316;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --gray: #64748b;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: var(--light);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 80px 20px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect width="2" height="2" fill="white" opacity="0.1"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            opacity: 0.95;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: 800;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .resources {
+            padding: 80px 20px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+
+        .section-description {
+            font-size: 18px;
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .resource-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 10px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border-color: var(--secondary);
+        }
+
+        .resource-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .resource-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 12px;
+        }
+
+        .resource-description {
+            color: var(--gray);
+            font-size: 15px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .resource-features {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .resource-features li {
+            padding: 6px 0;
+            color: var(--gray);
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .resource-features li::before {
+            content: "✓";
+            color: var(--secondary);
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(8, 145, 178, 0.3);
+        }
+
+        .btn-outline {
+            background: white;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--accent) 0%, #dc2626 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 20px;
+            margin: 60px auto;
+            max-width: 1200px;
+        }
+
+        .cta-section h2 {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            opacity: 0.95;
+            margin-bottom: 30px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+        }
+
+        .feature-number {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 20px;
+            margin: 0 auto 15px;
+        }
+
+        .feature h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .feature p {
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer p {
+            opacity: 0.8;
+            margin-bottom: 10px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .social-links a:hover {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 32px;
+            }
+
+            .subtitle {
+                font-size: 16px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .stats {
+                gap: 20px;
+            }
+
+            .stat-number {
+                font-size: 28px;
+            }
+
+            .resources-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-in {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        .delay-1 { animation-delay: 0.1s; opacity: 0; }
+        .delay-2 { animation-delay: 0.2s; opacity: 0; }
+        .delay-3 { animation-delay: 0.3s; opacity: 0; }
+        .delay-4 { animation-delay: 0.4s; opacity: 0; }
+        .delay-5 { animation-delay: 0.5s; opacity: 0; }
+        .delay-6 { animation-delay: 0.6s; opacity: 0; }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-content">
+            <div class="badge animate-in">DAY 1 of 7</div>
+            <h1 class="animate-in delay-1">Resume Optimization for<br>Remote Jobs</h1>
+            <p class="subtitle animate-in delay-2">Get the complete toolkit to transform your resume and land remote interviews in 7-14 days</p>
+            <div class="stats animate-in delay-3">
+                <div class="stat">
+                    <span class="stat-number">6</span>
+                    <span class="stat-label">Free Resources</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">100+</span>
+                    <span class="stat-label">Keywords & Verbs</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">5</span>
+                    <span class="stat-label">Calculators</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="resources">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Your Complete Day 1 Package</h2>
+                <p class="section-description">Everything you need to optimize your resume for remote jobs. Research-backed, ATS-tested, and ready to use.</p>
+            </div>
+
+            <div class="resources-grid">
+                <div class="resource-card animate-in delay-1">
+                    <div class="resource-icon">📋</div>
+                    <h3 class="resource-title">Remote Resume Keywords Checklist</h3>
+                    <p class="resource-description">Your ultimate pre-submission checklist with 60+ items organized by category.</p>
+                    <ul class="resource-features">
+                        <li>25+ essential remote keywords</li>
+                        <li>Location & availability optimization</li>
+                        <li>ATS technical compliance checklist</li>
+                        <li>Quantification framework</li>
+                        <li>Pre-submission final check</li>
+                    </ul>
+                    <a href="https://docs.google.com/document/d/11CkjWFKCTYfXU8nRSn-Oh45lGrfElVAAV9b3lZyNSgo/edit" target="_blank" class="btn">Access Checklist →</a>
+                </div>
+
+                <div class="resource-card animate-in delay-2">
+                    <div class="resource-icon">🎯</div>
+                    <h3 class="resource-title">ATS Optimization Guide</h3>
+                    <p class="resource-description">Learn exactly how ATS systems rank resumes and how to beat them.</p>
+                    <ul class="resource-features">
+                        <li>How ATS actually works (step-by-step)</li>
+                        <li>The ATS formula: 40% keywords + 30% format + 30% metrics</li>
+                        <li>7-step optimization process</li>
+                        <li>Before/after examples by role</li>
+                        <li>Common mistakes to avoid</li>
+                    </ul>
+                    <a href="https://docs.google.com/document/d/1zM47XPcVAdySFL8jxyT8G91cmrDypmxyndEgx3iz9ww/edit" target="_blank" class="btn">Read Guide →</a>
+                </div>
+
+                <div class="resource-card animate-in delay-3">
+                    <div class="resource-icon">✨</div>
+                    <h3 class="resource-title">Sample Remote Resume</h3>
+                    <p class="resource-description">Real filled example scoring 90-95% on ATS scanners. Use it as your reference.</p>
+                    <ul class="resource-features">
+                        <li>Complete filled resume (Digital Marketing Specialist)</li>
+                        <li>Every bullet has metrics & remote context</li>
+                        <li>Remote keywords naturally integrated</li>
+                        <li>Professional summary example</li>
+                        <li>Analysis of what makes it work</li>
+                    </ul>
+                    <a href="https://docs.google.com/document/d/14vaEBZxY2DTeE2ytMabHifB_S993G6TkorVxhCM9uX4/edit" target="_blank" class="btn">View Example →</a>
+                </div>
+
+                <div class="resource-card animate-in delay-4">
+                    <div class="resource-icon">📝</div>
+                    <h3 class="resource-title">Template Customization Guide</h3>
+                    <p class="resource-description">Step-by-step guide to customize your resume template like a pro.</p>
+                    <ul class="resource-features">
+                        <li>Fill-in-the-blank professional summary</li>
+                        <li>100+ action verbs by category</li>
+                        <li>Quantification framework</li>
+                        <li>Bullet examples for 7+ roles</li>
+                        <li>Final polish checklist</li>
+                    </ul>
+                    <a href="https://docs.google.com/document/d/1iSCTaEziGC4EwQ_lEbBrLmvj-dFW6S-O2LvrtezuelE/edit" target="_blank" class="btn">Get Guide →</a>
+                </div>
+
+                <div class="resource-card animate-in delay-5">
+                    <div class="resource-icon">📊</div>
+                    <h3 class="resource-title">Master Tracking Spreadsheet</h3>
+                    <p class="resource-description">All-in-one Excel/Sheets with 5 tabs to track everything.</p>
+                    <ul class="resource-features">
+                        <li>Resume checklist tracker (60+ items)</li>
+                        <li>Keyword bank (100+ keywords)</li>
+                        <li>5 metrics calculators with formulas</li>
+                        <li>Job application tracker</li>
+                        <li>Action verbs library (100+)</li>
+                    </ul>
+                    <a href="https://docs.google.com/spreadsheets/d/1TwqlV3yMoKNxSAFuIhjSE3Ta5gqj6zlvjVN-u_u--zQ/edit" target="_blank" class="btn">Open Spreadsheet →</a>
+                </div>
+
+                <div class="resource-card animate-in delay-6">
+                    <div class="resource-icon">🎨</div>
+                    <h3 class="resource-title">Resume Templates Guide</h3>
+                    <p class="resource-description">Curated list of the best free remote resume templates with download links.</p>
+                    <ul class="resource-features">
+                        <li>Main recommended: Indeed templates (3 formats)</li>
+                        <li>3 alternative remote-specific templates</li>
+                        <li>4 general ATS-friendly templates</li>
+                        <li>Step-by-step download instructions</li>
+                        <li>Quick start guide & FAQ</li>
+                    </ul>
+                    <a href="https://docs.google.com/document/d/1gBCeiC--dMntX1oSogwzo5YpbqlbiK_XCCau44UYuHo/edit" target="_blank" class="btn">Browse Templates →</a>
+                </div>
+            </div>
+
+            <div class="section-header" style="margin-top: 80px;">
+                <h2 class="section-title">How to Use These Resources</h2>
+                <p class="section-description">Follow this simple 6-step process to optimize your resume</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-number">1</div>
+                    <h3>Download Templates</h3>
+                    <p>Get your remote resume template from the Templates Guide</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-number">2</div>
+                    <h3>Follow Customization Guide</h3>
+                    <p>Use the step-by-step guide to fill it out properly</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-number">3</div>
+                    <h3>Add Keywords</h3>
+                    <p>Use the Keyword Bank to add remote-specific terms</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-number">4</div>
+                    <h3>Quantify Everything</h3>
+                    <p>Use the Metrics Calculator to add numbers to bullets</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-number">5</div>
+                    <h3>Check with Checklist</h3>
+                    <p>Run through the 60+ item checklist before submitting</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-number">6</div>
+                    <h3>Test & Track</h3>
+                    <p>Test with Jobscan.co and track applications in the spreadsheet</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <section class="cta-section">
+            <h2>Ready for Days 2-7?</h2>
+            <p>This is just the beginning. Follow along for the complete Remote Ready in 7 Days series.</p>
+            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                <a href="https://instagram.com/chillapply" target="_blank" class="btn">Follow on Instagram</a>
+                <a href="#resources" class="btn btn-outline">Download All Resources</a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p><strong>Made by ChillApply</strong></p>
+            <p>Remote Ready in 7 Days - Day 1: Resume Optimization</p>
+            <p style="margin-top: 20px; font-size: 14px;">All resources are free and based on analysis of 10,000+ remote job applications.</p>
+            <div class="social-links">
+                <a href="https://instagram.com/chillapply" target="_blank">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const resource = this.closest('.resource-card')?.querySelector('.resource-title')?.textContent || 'CTA';
+                console.log('Resource clicked:', resource);
+            });
+        });
+    </script>
+</body>
+</html>
