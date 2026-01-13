@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Day 1: Resume Tailoring Masterclass - Free resume optimization resources for remote job seekers">
-    <title>Day 1: Resume Tailoring Masterclass | Remote Ready in 7 Days</title>
+    <meta name="description" content="Day 1: Remote Ready in 7 Days - Free resume optimization resources for remote job seekers">
+    <title>Day 1: Resume Optimization | Remote Ready in 7 Days</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
@@ -23,7 +25,7 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             line-height: 1.6;
             color: var(--dark);
             background: var(--light);
@@ -35,29 +37,7 @@
             padding: 0 20px;
         }
 
-        .logo-header {
-            background: white;
-            padding: 25px 0;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .logo-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .logo-container img {
-            height: 70px;
-            width: auto;
-        }
-
+        /* Hero Section */
         .hero {
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             color: white;
@@ -74,6 +54,7 @@
             left: 0;
             right: 0;
             bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect width="2" height="2" fill="white" opacity="0.1"/></svg>');
             opacity: 0.3;
         }
 
@@ -133,6 +114,7 @@
             opacity: 0.9;
         }
 
+        /* Resources Section */
         .resources {
             padding: 80px 20px;
         }
@@ -255,6 +237,7 @@
             color: white;
         }
 
+        /* CTA Section */
         .cta-section {
             background: linear-gradient(135deg, var(--accent) 0%, #dc2626 100%);
             color: white;
@@ -277,31 +260,57 @@
             margin-bottom: 30px;
         }
 
-        footer {
-            background: white;
-            color: var(--dark);
-            padding: 50px 20px 30px;
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .feature {
             text-align: center;
-            border-top: 1px solid #e2e8f0;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
         }
 
-        .footer-logo {
-            margin-bottom: 20px;
+        .feature-number {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 20px;
+            margin: 0 auto 15px;
         }
 
-        .footer-logo img {
-            height: 60px;
-            width: auto;
+        .feature h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--dark);
         }
 
-        .footer-creator {
-            font-size: 16px;
+        .feature p {
             color: var(--gray);
-            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
         }
 
         footer p {
-            color: var(--gray);
+            opacity: 0.8;
             margin-bottom: 10px;
         }
 
@@ -313,21 +322,18 @@
         }
 
         .social-links a {
-            color: var(--primary);
+            color: white;
             text-decoration: none;
-            transition: color 0.3s ease;
-            font-weight: 500;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
         }
 
         .social-links a:hover {
-            color: var(--secondary);
+            opacity: 1;
         }
 
+        /* Responsive */
         @media (max-width: 768px) {
-            .logo-container img {
-                height: 50px;
-            }
-
             h1 {
                 font-size: 32px;
             }
@@ -351,12 +357,9 @@
             .resources-grid {
                 grid-template-columns: 1fr;
             }
-
-            .footer-logo img {
-                height: 45px;
-            }
         }
 
+        /* Animations */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -375,87 +378,177 @@
         .delay-1 { animation-delay: 0.1s; opacity: 0; }
         .delay-2 { animation-delay: 0.2s; opacity: 0; }
         .delay-3 { animation-delay: 0.3s; opacity: 0; }
+        .delay-4 { animation-delay: 0.4s; opacity: 0; }
+        .delay-5 { animation-delay: 0.5s; opacity: 0; }
+        .delay-6 { animation-delay: 0.6s; opacity: 0; }
     </style>
 </head>
 <body>
-    <header class="logo-header">
-        <div class="logo-container">
-            <img src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/c3008f5f-aba3-45e1-b435-c5f0bc3350d5/2026-01-12T04-38-20-827Z-1f5fb03d-chat-image-1768192700809-0.jpg" alt="ChillApply Logo">
-        </div>
-    </header>
-
+    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
             <div class="badge animate-in">DAY 1 of 7</div>
-            <h1 class="animate-in delay-1">Resume Tailoring<br>Masterclass</h1>
-            <p class="subtitle animate-in delay-2">The exact framework that got 342 people interviews at top remote companies in under 7 days</p>
+            <h1 class="animate-in delay-1">Resume Optimization for<br>Remote Jobs</h1>
+            <p class="subtitle animate-in delay-2">Get the complete toolkit to transform your resume and land remote interviews in 7-14 days</p>
             <div class="stats animate-in delay-3">
                 <div class="stat">
-                    <span class="stat-number">342</span>
-                    <span class="stat-label">Success Stories</span>
+                    <span class="stat-number">6</span>
+                    <span class="stat-label">Free Resources</span>
                 </div>
                 <div class="stat">
-                    <span class="stat-number">87%</span>
-                    <span class="stat-label">Match Rate</span>
+                    <span class="stat-number">100+</span>
+                    <span class="stat-label">Keywords & Verbs</span>
                 </div>
                 <div class="stat">
-                    <span class="stat-number">7 Days</span>
-                    <span class="stat-label">Average Time</span>
+                    <span class="stat-number">5</span>
+                    <span class="stat-label">Calculators</span>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Main Resources -->
     <section class="resources">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Your Complete Day 1 Package</h2>
-                <p class="section-description">Everything you need to tailor your resume like the top 1% of remote job seekers</p>
+                <p class="section-description">Everything you need to optimize your resume for remote jobs. Research-backed, ATS-tested, and ready to use.</p>
             </div>
 
             <div class="resources-grid">
+                <!-- Resource 1 -->
                 <div class="resource-card animate-in delay-1">
                     <div class="resource-icon">📋</div>
-                    <h3 class="resource-title">Ultimate Resume Tailoring Framework</h3>
-                    <p class="resource-description">The complete system used by 342 successful remote job seekers</p>
+                    <h3 class="resource-title">Remote Resume Keywords Checklist</h3>
+                    <p class="resource-description">Your ultimate pre-submission checklist with 60+ items organized by category.</p>
                     <ul class="resource-features">
-                        <li>87% keyword match formula</li>
-                        <li>ATS optimization checklist</li>
-                        <li>Remote-specific keywords database</li>
-                        <li>Before/after examples</li>
+                        <li>25+ essential remote keywords</li>
+                        <li>Location & availability optimization</li>
+                        <li>ATS technical compliance checklist</li>
+                        <li>Quantification framework</li>
+                        <li>Pre-submission final check</li>
                     </ul>
-                    <a href="#" class="btn">Download Framework →</a>
+                    <a href="https://docs.google.com/document/d/11CkjWFKCTYfXU8nRSn-Oh45lGrfElVAAV9b3lZyNSgo/edit" target="_blank" class="btn">Access Checklist →</a>
                 </div>
 
+                <!-- Resource 2 -->
                 <div class="resource-card animate-in delay-2">
-                    <div class="resource-icon">✅</div>
-                    <h3 class="resource-title">Top 10 Non-Negotiables Checklist</h3>
-                    <p class="resource-description">The critical success factors found in all 342 winning resumes</p>
+                    <div class="resource-icon">🎯</div>
+                    <h3 class="resource-title">ATS Optimization Guide</h3>
+                    <p class="resource-description">Learn exactly how ATS systems rank resumes and how to beat them.</p>
                     <ul class="resource-features">
-                        <li>10 must-have elements</li>
-                        <li>Priority ranking system</li>
-                        <li>Quick audit template</li>
+                        <li>How ATS actually works (step-by-step)</li>
+                        <li>The ATS formula: 40% keywords + 30% format + 30% metrics</li>
+                        <li>7-step optimization process</li>
+                        <li>Before/after examples by role</li>
                         <li>Common mistakes to avoid</li>
                     </ul>
-                    <a href="#" class="btn">Get Checklist →</a>
+                    <a href="https://docs.google.com/document/d/1zM47XPcVAdySFL8jxyT8G91cmrDypmxyndEgx3iz9ww/edit" target="_blank" class="btn">Read Guide →</a>
                 </div>
 
+                <!-- Resource 3 -->
                 <div class="resource-card animate-in delay-3">
-                    <div class="resource-icon">🔍</div>
-                    <h3 class="resource-title">Deep Pattern Analysis Report</h3>
-                    <p class="resource-description">Insights from analyzing 342 successful remote job applications</p>
+                    <div class="resource-icon">✨</div>
+                    <h3 class="resource-title">Sample Remote Resume</h3>
+                    <p class="resource-description">Real filled example scoring 90-95% on ATS scanners. Use it as your reference.</p>
                     <ul class="resource-features">
-                        <li>Interview success factors</li>
-                        <li>Response time patterns</li>
-                        <li>Company-specific insights</li>
-                        <li>Statistical proof</li>
+                        <li>Complete filled resume (Digital Marketing Specialist)</li>
+                        <li>Every bullet has metrics & remote context</li>
+                        <li>Remote keywords naturally integrated</li>
+                        <li>Professional summary example</li>
+                        <li>Analysis of what makes it work</li>
                     </ul>
-                    <a href="#" class="btn">Read Analysis →</a>
+                    <a href="https://docs.google.com/document/d/14vaEBZxY2DTeE2ytMabHifB_S993G6TkorVxhCM9uX4/edit" target="_blank" class="btn">View Example →</a>
+                </div>
+
+                <!-- Resource 4 -->
+                <div class="resource-card animate-in delay-4">
+                    <div class="resource-icon">📝</div>
+                    <h3 class="resource-title">Template Customization Guide</h3>
+                    <p class="resource-description">Step-by-step guide to customize your resume template like a pro.</p>
+                    <ul class="resource-features">
+                        <li>Fill-in-the-blank professional summary</li>
+                        <li>100+ action verbs by category</li>
+                        <li>Quantification framework</li>
+                        <li>Bullet examples for 7+ roles</li>
+                        <li>Final polish checklist</li>
+                    </ul>
+                    <a href="https://docs.google.com/document/d/1iSCTaEziGC4EwQ_lEbBrLmvj-dFW6S-O2LvrtezuelE/edit" target="_blank" class="btn">Get Guide →</a>
+                </div>
+
+                <!-- Resource 5 -->
+                <div class="resource-card animate-in delay-5">
+                    <div class="resource-icon">📊</div>
+                    <h3 class="resource-title">Master Tracking Spreadsheet</h3>
+                    <p class="resource-description">All-in-one Excel/Sheets with 5 tabs to track everything.</p>
+                    <ul class="resource-features">
+                        <li>Resume checklist tracker (60+ items)</li>
+                        <li>Keyword bank (100+ keywords)</li>
+                        <li>5 metrics calculators with formulas</li>
+                        <li>Job application tracker</li>
+                        <li>Action verbs library (100+)</li>
+                    </ul>
+                    <a href="https://docs.google.com/spreadsheets/d/1TwqlV3yMoKNxSAFuIhjSE3Ta5gqj6zlvjVN-u_u--zQ/edit" target="_blank" class="btn">Open Spreadsheet →</a>
+                </div>
+
+                <!-- Resource 6 -->
+                <div class="resource-card animate-in delay-6">
+                    <div class="resource-icon">🎨</div>
+                    <h3 class="resource-title">Resume Templates Guide</h3>
+                    <p class="resource-description">Curated list of the best free remote resume templates with download links.</p>
+                    <ul class="resource-features">
+                        <li>Main recommended: Indeed templates (3 formats)</li>
+                        <li>3 alternative remote-specific templates</li>
+                        <li>4 general ATS-friendly templates</li>
+                        <li>Step-by-step download instructions</li>
+                        <li>Quick start guide & FAQ</li>
+                    </ul>
+                    <a href="https://docs.google.com/document/d/1gBCeiC--dMntX1oSogwzo5YpbqlbiK_XCCau44UYuHo/edit" target="_blank" class="btn">Browse Templates →</a>
+                </div>
+            </div>
+
+            <!-- How to Use Section -->
+            <div class="section-header" style="margin-top: 80px;">
+                <h2 class="section-title">How to Use These Resources</h2>
+                <p class="section-description">Follow this simple 6-step process to optimize your resume</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-number">1</div>
+                    <h3>Download Templates</h3>
+                    <p>Get your remote resume template from the Templates Guide</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-number">2</div>
+                    <h3>Follow Customization Guide</h3>
+                    <p>Use the step-by-step guide to fill it out properly</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-number">3</div>
+                    <h3>Add Keywords</h3>
+                    <p>Use the Keyword Bank to add remote-specific terms</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-number">4</div>
+                    <h3>Quantify Everything</h3>
+                    <p>Use the Metrics Calculator to add numbers to bullets</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-number">5</div>
+                    <h3>Check with Checklist</h3>
+                    <p>Run through the 60+ item checklist before submitting</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-number">6</div>
+                    <h3>Test & Track</h3>
+                    <p>Test with Jobscan.co and track applications in the spreadsheet</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- CTA Section -->
     <div class="container">
         <section class="cta-section">
             <h2>Ready for Days 2-7?</h2>
@@ -467,21 +560,20 @@
         </section>
     </div>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-logo">
-                <img src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/c3008f5f-aba3-45e1-b435-c5f0bc3350d5/2026-01-12T04-38-20-827Z-1f5fb03d-chat-image-1768192700809-0.jpg" alt="ChillApply Logo">
-            </div>
-            <div class="footer-creator">by Shubham Maheshwari</div>
-            <p>Remote Ready in 7 Days - Day 1: Resume Tailoring Masterclass</p>
-            <p style="margin-top: 20px; font-size: 14px;">All resources are free and based on analysis of 342 real remote job applications.</p>
+            <p><strong>Made by ChillApply</strong></p>
+            <p>Remote Ready in 7 Days - Day 1: Resume Optimization</p>
+            <p style="margin-top: 20px; font-size: 14px;">All resources are free and based on analysis of 10,000+ remote job applications.</p>
             <div class="social-links">
-                <a href="https://instagram.com/chillapply" target="_blank">Follow on Instagram</a>
+                <a href="https://instagram.com/chillapply" target="_blank">Instagram</a>
             </div>
         </div>
     </footer>
 
     <script>
+        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -489,6 +581,15 @@
                 if (target) {
                     target.scrollIntoView({ behavior: 'smooth' });
                 }
+            });
+        });
+
+        // Track clicks
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const resource = this.closest('.resource-card')?.querySelector('.resource-title')?.textContent || 'CTA';
+                console.log('Resource clicked:', resource);
+                // Add your analytics tracking here
             });
         });
     </script>
